@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fornanzza | Indústria de salgados em Goiânia</title>
+<meta name="description" content="Salgados frescos e ultracongelados, no cento ou no quilo. Qualidade e padronização pra sua casa, seu evento ou seu negócio. Atacado e varejo em Goiânia.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#4C1111">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fornanzza | Indústria de salgados">
+<meta property="og:description" content="Prévia do novo site: cardápio, calculadora de festa e pedido direto no WhatsApp.">
+<meta property="og:image" content="https://vinnsneto.github.io/fornanzza/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://vinnsneto.github.io/fornanzza/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --vinho:#4C1111;--vinho-esc:#2E0A0A;--vinho-cl:#6A1C1C;
+  --lar:#FF8200;--lar2:#FF7300;--lar-esc:#B44A00;
+  --creme:#F6E9D7;--creme2:#FBF4EA;--tinta:#2A0A0A;--suave:#7A5A55;
+  --r:24px;--max:1200px;
+  --pat:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' opacity='.05'%3E%3Crect x='20' y='40' width='70' height='18' rx='9'/%3E%3Cpath d='M10 49h10M90 49h10'/%3E%3Cpath d='M180 120V40M180 54c-10-3-13-11-11-18 8 2 12 9 11 18zM180 70c-10-3-13-11-11-18 8 2 12 9 11 18zM180 54c10-3 13-11 11-18-8 2-12 9-11 18zM180 70c10-3 13-11 11-18-8 2-12 9-11 18z'/%3E%3Cpath d='M140 200h80M148 200c0-26 64-26 64 0M180 168v6'/%3E%3Crect x='24' y='150' width='70' height='62' rx='9'/%3E%3Crect x='34' y='170' width='50' height='32' rx='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;overflow-x:clip}
+main{overflow-x:clip}
+body{margin:0;font-family:'Red Hat Display',system-ui,sans-serif;color:var(--tinta);background:var(--creme2);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.05;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(34px,5vw,56px);font-weight:900}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--lar2)}
+.eyebrow::before,.eyebrow.both::after{content:"";width:28px;height:4px;border-radius:2px;background:var(--lar2)}
+.lead{font-size:clamp(17px,1.6vw,20px);color:var(--suave);max-width:640px}
+.sec{padding:clamp(72px,10vw,120px) 0}
+.sec-head{display:grid;gap:16px;margin-bottom:44px}
+.sec-head.center{text-align:center;justify-items:center}
+.dark{background:var(--vinho) var(--pat);color:#fff}
+.dark .lead{color:#E9CFC9}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;padding:16px 28px;font-weight:900;font-size:17px;text-decoration:none;transition:transform .15s,box-shadow .15s,background .2s;white-space:nowrap}
+.btn-lar{background:var(--lar);color:#fff;box-shadow:0 6px 0 var(--lar-esc)}
+.btn-lar:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--lar-esc)}
+.btn-lar:active{transform:translateY(4px);box-shadow:0 2px 0 var(--lar-esc)}
+.btn-zap{background:#25D366;color:#073B1C;box-shadow:0 6px 0 #138A42}
+.btn-zap:hover{transform:translateY(-2px);box-shadow:0 8px 0 #138A42}
+.btn-zap:active{transform:translateY(4px);box-shadow:0 2px 0 #138A42}
+.btn-ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn svg{width:22px;height:22px;flex:none}
+
+/* faixa de prévia */
+.preview-bar{background:var(--tinta);color:#F3D9C9;font-size:13px;text-align:center;padding:8px 44px;position:relative}
+.preview-bar b{color:#fff}
+.preview-bar button{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:0;color:#F3D9C9;font-size:20px;line-height:1;padding:4px 8px}
+
+/* topo */
+.topo{position:sticky;top:0;z-index:50;transition:background .3s,box-shadow .3s}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px}
+.topo.solid{background:rgba(58,12,12,.96);backdrop-filter:blur(10px);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.topo:not(.solid){background:var(--vinho)}
+.logo img{height:34px;width:auto}
+.nav{display:flex;gap:28px;align-items:center}
+.nav a{color:#F3E2DC;text-decoration:none;font-weight:700;font-size:15px;position:relative}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:3px;border-radius:2px;background:var(--lar);transition:right .25s}
+.nav a:hover::after{right:0}
+.topo-cta{display:flex;align-items:center;gap:12px}
+.carrinho{position:relative;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);color:#fff;border:0;border-radius:999px;padding:10px 16px;font-weight:700;text-decoration:none;font-size:15px}
+.carrinho svg{width:20px;height:20px}
+.carrinho .qtd{background:var(--lar);color:#fff;border-radius:999px;min-width:22px;height:22px;display:inline-grid;place-items:center;font-size:12px;font-weight:900;padding:0 6px}
+.carrinho.bump{animation:bump .4s}
+@keyframes bump{40%{transform:scale(1.15)}}
+.menu-btn{display:none;background:none;border:0;color:#fff;padding:8px}
+.menu-btn svg{width:28px;height:28px}
+
+/* hero */
+.hero{background:var(--vinho) var(--pat);color:#fff;position:relative;overflow:hidden;padding:48px 0 110px}
+.hero::after{content:"";position:absolute;inset:auto -10% -1px -10%;height:90px;background:var(--creme2);border-radius:50% 50% 0 0/100% 100% 0 0}
+.hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:clamp(44px,6.4vw,84px);font-weight:900;letter-spacing:-.035em;margin:18px 0 22px}
+.rot{display:inline-block;vertical-align:bottom;height:1.08em;overflow:hidden;color:var(--lar);transition:width .45s cubic-bezier(.6,0,.2,1);text-shadow:0 5px 0 var(--vinho-esc)}
+.rot-in{display:flex;flex-direction:column;transition:transform .55s cubic-bezier(.6,-.2,.2,1.25)}
+.rot-in b{height:1.08em;line-height:1.08em;font-weight:900;white-space:nowrap}
+.hero .lead{color:#EED5CE;margin-bottom:32px}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.selos{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.selo{display:inline-flex;align-items:center;gap:8px;border:2px solid rgba(255,255,255,.18);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:700;color:#F6E2DB}
+.selo svg{width:18px;height:18px;color:var(--lar)}
+.hero-art{position:relative;aspect-ratio:4/5;max-width:480px;justify-self:end;width:100%}
+.hero-foto{position:absolute;inset:0;border-radius:36px;overflow:hidden;box-shadow:0 18px 0 var(--vinho-esc),0 40px 80px rgba(0,0,0,.45);transform:rotate(2.5deg)}
+.hero-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity .9s,transform 4s ease-out}
+.hero-foto img.on{opacity:1;transform:scale(1)}
+.hero-tag{position:absolute;left:-28px;bottom:42px;background:#fff;color:var(--vinho);border-radius:18px;padding:14px 20px;box-shadow:0 8px 0 var(--vinho-esc);font-weight:900;font-size:18px;transform:rotate(-3deg);min-width:220px}
+.hero-tag small{display:block;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--lar2)}
+.hero-tag span{display:block;transition:opacity .3s}
+.selo-gira{position:absolute;right:-30px;top:-30px;width:150px;height:150px;animation:gira 18s linear infinite}
+.selo-gira .miolo{animation:gira 18s linear infinite reverse;transform-origin:75px 75px}
+@keyframes gira{to{transform:rotate(360deg)}}
+.flutua{animation:flutua 5s ease-in-out infinite}
+@keyframes flutua{50%{transform:translateY(-10px)}}
+
+/* faixa que corre */
+.faixa{background:var(--lar);color:#fff;overflow:hidden;white-space:nowrap;padding:18px 0;transform:rotate(-1.5deg);margin:-30px -20px 0;position:relative;z-index:2;box-shadow:0 8px 0 var(--lar-esc)}
+.faixa-in{display:inline-flex;gap:40px;animation:corre 30s linear infinite;font-weight:900;font-size:22px;text-transform:uppercase;letter-spacing:.02em}
+.faixa-in span{display:inline-flex;align-items:center;gap:40px}
+.faixa-in span::after{content:"";width:12px;height:12px;border-radius:50%;background:var(--vinho)}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+/* sobre */
+.sobre .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.sobre p{color:var(--suave);font-size:18px;margin:18px 0 0}
+.pilares{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.pilar{background:#fff;border-radius:20px;padding:22px;box-shadow:0 2px 0 rgba(76,17,17,.08),0 16px 40px rgba(76,17,17,.06);transition:transform .25s}
+.pilar:hover{transform:translateY(-4px) rotate(-.6deg)}
+.pilar .ic{width:48px;height:48px;border-radius:14px;background:var(--creme);display:grid;place-items:center;color:var(--lar2);margin-bottom:12px}
+.pilar .ic svg{width:26px;height:26px}
+.pilar h3{font-size:19px;font-weight:900;color:var(--vinho)}
+.pilar p{font-size:15px;margin:6px 0 0}
+.frase{margin-top:36px;padding:26px 28px;border-radius:22px;background:var(--vinho);color:#fff;font-size:clamp(20px,2.2vw,26px);font-weight:900;line-height:1.2;position:relative}
+.frase s{text-decoration-color:var(--lar);text-decoration-thickness:4px;opacity:.75}
+.frase em{font-style:normal;color:var(--lar)}
+.reel-box{justify-self:center;text-align:center}
+.celular{position:relative;width:min(320px,80vw);aspect-ratio:9/16;border-radius:40px;padding:12px;background:#1a0606;box-shadow:0 20px 0 var(--vinho-esc),0 40px 80px rgba(76,17,17,.35);transform:rotate(-2deg)}
+.celular video{width:100%;height:100%;object-fit:cover;border-radius:30px;background:#000;display:block}
+.play{position:absolute;inset:12px;border-radius:30px;border:0;background:rgba(46,10,10,.35);display:grid;place-items:center;color:#fff;transition:background .2s}
+.play:hover{background:rgba(46,10,10,.15)}
+.play span{width:84px;height:84px;border-radius:50%;background:var(--lar);display:grid;place-items:center;box-shadow:0 6px 0 var(--lar-esc);animation:pulsa 2s infinite}
+.play svg{width:34px;height:34px;margin-left:5px}
+@keyframes pulsa{0%{box-shadow:0 6px 0 var(--lar-esc),0 0 0 0 rgba(255,130,0,.6)}70%{box-shadow:0 6px 0 var(--lar-esc),0 0 0 26px rgba(255,130,0,0)}}
+.reel-box p{margin:30px 0 0;font-weight:700;color:var(--suave);font-size:15px}
+
+/* produtos */
+.filtros{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.chip{border:2px solid rgba(76,17,17,.15);background:#fff;color:var(--vinho);border-radius:999px;padding:10px 18px;font-weight:700;font-size:15px;transition:all .2s}
+.chip:hover{border-color:var(--lar)}
+.chip.on{background:var(--vinho);border-color:var(--vinho);color:#fff}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
+.card{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 2px 0 rgba(76,17,17,.08),0 18px 40px rgba(76,17,17,.07);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s,opacity .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 2px 0 rgba(76,17,17,.08),0 28px 50px rgba(76,17,17,.14)}
+.card.sai{opacity:0;transform:scale(.94)}
+.card .foto{aspect-ratio:1/1;overflow:hidden;position:relative;border:0;padding:0;background:#f4f1ee}
+.card .foto img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover .foto img{transform:scale(1.07)}
+.card .foto .lupa{position:absolute;right:12px;top:12px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;color:var(--vinho);opacity:0;transform:scale(.8);transition:all .25s}
+.card:hover .lupa{opacity:1;transform:none}
+.card .lupa svg{width:20px;height:20px}
+.card .info{padding:18px 20px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .cat{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--lar2)}
+.card h3{font-size:20px;font-weight:900;color:var(--vinho)}
+.card p{margin:0;color:var(--suave);font-size:15px;flex:1}
+.add{margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--creme);border:0;border-radius:14px;padding:12px 14px;font-weight:900;color:var(--vinho);font-size:15px;transition:background .2s,color .2s}
+.add:hover{background:var(--lar);color:#fff}
+.add .n{background:var(--vinho);color:#fff;border-radius:999px;padding:2px 10px;font-size:13px}
+.add.tem{background:var(--vinho);color:#fff}
+.add.tem .n{background:var(--lar)}
+.add svg{width:20px;height:20px}
+
+/* para quem */
+.abas{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.aba{background:rgba(255,255,255,.08);border:0;color:#F3E2DC;border-radius:999px;padding:12px 20px;font-weight:700;font-size:15px;display:inline-flex;align-items:center;gap:8px;transition:all .2s}
+.aba svg{width:20px;height:20px}
+.aba:hover{background:rgba(255,255,255,.16)}
+.aba.on{background:var(--lar);color:#fff;box-shadow:0 5px 0 var(--lar-esc)}
+.painel{display:none;grid-template-columns:1fr 1fr;gap:48px;align-items:center;background:rgba(0,0,0,.18);border-radius:32px;padding:28px}
+.painel.on{display:grid;animation:entra .5s}
+@keyframes entra{from{opacity:0;transform:translateY(16px)}}
+.painel img{border-radius:22px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.painel .linha{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--lar)}
+.painel h3{font-size:clamp(28px,3.4vw,40px);font-weight:900;margin:10px 0 14px}
+.painel p{color:#EED5CE;margin:0 0 18px}
+.painel ul{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:10px}
+.painel li{display:flex;gap:10px;align-items:flex-start;font-weight:500}
+.painel li svg{width:22px;height:22px;color:var(--lar);flex:none;margin-top:1px}
+
+/* calculadora */
+.calc{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:stretch}
+.calc-in,.calc-out{background:#fff;border-radius:28px;padding:32px;box-shadow:0 2px 0 rgba(76,17,17,.08),0 18px 40px rgba(76,17,17,.07)}
+.campo{margin-bottom:26px}
+.campo>label,.campo>.rot-campo{display:flex;justify-content:space-between;font-weight:900;color:var(--vinho);margin-bottom:12px;font-size:17px}
+.campo output{color:var(--lar2);font-size:22px}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:10px;border-radius:999px;background:linear-gradient(90deg,var(--lar) var(--p,30%),var(--creme) var(--p,30%));outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;border-radius:50%;background:#fff;border:6px solid var(--lar);box-shadow:0 3px 0 var(--lar-esc);cursor:grab}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:#fff;border:6px solid var(--lar);cursor:grab}
+.opcoes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.opcoes label{position:relative}
+.opcoes input{position:absolute;opacity:0}
+.opcoes span{display:block;text-align:center;border:2px solid rgba(76,17,17,.14);border-radius:16px;padding:12px 8px;font-weight:700;font-size:14px;color:var(--vinho);cursor:pointer;transition:all .2s;line-height:1.25;height:100%}
+.opcoes span small{display:block;font-weight:500;color:var(--suave);font-size:12px;margin-top:2px}
+.opcoes input:checked+span{border-color:var(--lar);background:#FFF3E6;box-shadow:inset 0 0 0 1px var(--lar)}
+.opcoes input:focus-visible+span{outline:3px solid var(--lar);outline-offset:2px}
+.calc-out{background:var(--vinho) var(--pat);color:#fff;display:flex;flex-direction:column;gap:18px}
+.calc-out .rot-campo{font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--lar)}
+.total{font-size:clamp(64px,8vw,96px);font-weight:900;line-height:.9;letter-spacing:-.04em}
+.total small{font-size:22px;letter-spacing:0;font-weight:700;color:#EED5CE}
+.centos{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border-radius:14px;padding:10px 16px;font-weight:700;width:max-content;max-width:100%}
+.centos b{color:var(--lar);font-size:22px}
+.mix{display:grid;gap:10px}
+.mix-l{display:grid;grid-template-columns:150px 1fr 50px;gap:10px;align-items:center;font-size:15px;font-weight:700}
+.mix-b{height:12px;border-radius:999px;background:rgba(255,255,255,.12);overflow:hidden}
+.mix-b i{display:block;height:100%;background:var(--lar);border-radius:999px;transition:width .6s cubic-bezier(.3,1.4,.5,1)}
+.mix-l em{font-style:normal;color:#EED5CE;text-align:right}
+.nota{font-size:13px;color:#D9B8B0;margin:0}
+.calc-out .acoes{display:flex;gap:12px;flex-wrap:wrap;margin-top:auto}
+
+/* pedido */
+.pedido{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:start}
+.lista{display:grid;gap:26px}
+.grupo h3{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--lar2);margin-bottom:12px}
+.item{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;background:#fff;border-radius:18px;padding:10px 12px 10px 10px;margin-bottom:10px;box-shadow:0 2px 0 rgba(76,17,17,.06);transition:box-shadow .2s}
+.item.tem{box-shadow:0 0 0 2px var(--lar),0 8px 20px rgba(255,130,0,.15)}
+.item img{width:64px;height:64px;border-radius:12px;object-fit:cover}
+.item b{display:block;color:var(--vinho);font-size:16px;line-height:1.2}
+.item small{color:var(--suave);font-size:13px}
+.passo{display:flex;align-items:center;gap:4px;background:var(--creme);border-radius:999px;padding:4px}
+.passo button{width:36px;height:36px;border-radius:50%;border:0;background:#fff;color:var(--vinho);font-size:20px;font-weight:900;line-height:1;display:grid;place-items:center;transition:background .2s}
+.passo button:hover{background:var(--lar);color:#fff}
+.passo span{min-width:30px;text-align:center;font-weight:900;color:var(--vinho)}
+.resumo{position:sticky;top:96px;background:#fff;border-radius:28px;padding:28px;box-shadow:0 2px 0 rgba(76,17,17,.08),0 24px 50px rgba(76,17,17,.1)}
+.resumo h3{font-size:26px;font-weight:900;color:var(--vinho)}
+.vazio{color:var(--suave);font-size:15px;padding:18px;border:2px dashed rgba(76,17,17,.15);border-radius:16px;text-align:center;margin:16px 0}
+.itens{list-style:none;margin:16px 0;padding:0;display:grid;gap:8px;max-height:220px;overflow:auto}
+.itens li{display:flex;justify-content:space-between;gap:12px;font-size:15px;border-bottom:1px solid #F1E6DA;padding-bottom:8px}
+.itens li b{color:var(--lar2);white-space:nowrap}
+.tot{display:flex;justify-content:space-between;font-weight:900;color:var(--vinho);font-size:18px;margin-bottom:18px}
+.seg{display:grid;grid-template-columns:repeat(2,1fr);background:var(--creme);border-radius:14px;padding:4px;gap:4px;margin-bottom:12px}
+.seg.tres{grid-template-columns:repeat(3,1fr)}
+.seg label{position:relative}
+.seg input{position:absolute;opacity:0}
+.seg span{display:block;text-align:center;padding:9px 6px;border-radius:10px;font-weight:700;font-size:14px;color:var(--vinho);cursor:pointer;transition:all .2s;line-height:1.2}
+.seg input:checked+span{background:#fff;box-shadow:0 2px 6px rgba(76,17,17,.12);color:var(--lar-esc)}
+.seg input:focus-visible+span{outline:3px solid var(--lar)}
+.form{display:grid;gap:10px;margin:14px 0 18px}
+.form input,.form textarea{width:100%;border:2px solid #EADBC9;border-radius:12px;padding:12px 14px;font:inherit;font-size:15px;color:var(--tinta);background:#FFFCF8;transition:border .2s}
+.form input:focus,.form textarea:focus{outline:none;border-color:var(--lar)}
+.form textarea{min-height:70px;resize:vertical}
+.form .dupla{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mini{font-size:12px;font-weight:700;color:var(--suave);letter-spacing:.06em;text-transform:uppercase;margin:4px 0 6px}
+.resumo .btn{width:100%}
+.resumo .sec-acoes{display:flex;justify-content:space-between;margin-top:12px}
+.link{background:none;border:0;color:var(--suave);font-weight:700;font-size:14px;text-decoration:underline;padding:4px}
+.link:hover{color:var(--lar-esc)}
+
+/* como funciona */
+.passos{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative;counter-reset:p}
+.passos::before{content:"";position:absolute;top:44px;left:12%;right:12%;height:4px;background:repeating-linear-gradient(90deg,var(--lar) 0 14px,transparent 14px 26px);opacity:.6}
+.p{text-align:center;position:relative}
+.p .bola{width:88px;height:88px;margin:0 auto 18px;border-radius:50%;background:#fff;color:var(--vinho);display:grid;place-items:center;box-shadow:0 6px 0 var(--vinho-esc);position:relative;transition:transform .3s}
+.p:hover .bola{transform:translateY(-6px) rotate(-6deg)}
+.p .bola svg{width:38px;height:38px}
+.p .bola::after{counter-increment:p;content:counter(p);position:absolute;right:-6px;top:-6px;width:32px;height:32px;border-radius:50%;background:var(--lar);color:#fff;font-weight:900;display:grid;place-items:center;font-size:15px}
+.p h3{font-size:21px;font-weight:900;margin-bottom:8px}
+.p p{color:#EED5CE;margin:0;font-size:15px}
+
+/* galeria */
+.galeria{columns:4 220px;column-gap:16px}
+.galeria button{display:block;width:100%;border:0;padding:0;margin:0 0 16px;border-radius:18px;overflow:hidden;background:#eee;break-inside:avoid;position:relative}
+.galeria img{width:100%;transition:transform .6s,filter .4s}
+.galeria button:hover img{transform:scale(1.06);filter:saturate(1.15)}
+.galeria button:nth-child(3n) img{aspect-ratio:4/5;object-fit:cover}
+
+/* faq */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.faq details{background:#fff;border-radius:18px;margin-bottom:12px;box-shadow:0 2px 0 rgba(76,17,17,.06);overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;padding:20px 22px;font-weight:900;color:var(--vinho);font-size:18px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{width:30px;height:30px;border-radius:50%;background:var(--creme);flex:none;position:relative;transition:transform .3s,background .3s}
+.faq summary i::before,.faq summary i::after{content:"";position:absolute;left:8px;right:8px;top:14px;height:2px;background:var(--vinho);border-radius:1px}
+.faq summary i::after{transform:rotate(90deg);transition:transform .3s}
+.faq details[open] summary i{background:var(--lar);transform:rotate(180deg)}
+.faq details[open] summary i::before,.faq details[open] summary i::after{background:#fff}
+.faq details[open] summary i::after{transform:rotate(0)}
+.faq details p{margin:0;padding:0 22px 22px;color:var(--suave)}
+
+/* contato */
+.contato .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}
+.contato-card{background:var(--vinho) var(--pat);color:#fff;border-radius:32px;padding:36px;display:flex;flex-direction:column;gap:18px}
+.contato-card h2{font-size:clamp(32px,4vw,46px)}
+.canal{display:flex;align-items:center;gap:14px;text-decoration:none;background:rgba(255,255,255,.07);border-radius:18px;padding:14px 16px;transition:background .2s,transform .2s}
+.canal:hover{background:rgba(255,255,255,.14);transform:translateX(4px)}
+.canal .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--lar);flex:none}
+.canal .ic svg{width:24px;height:24px}
+.canal b{display:block}
+.canal small{color:#E3C4BC}
+.mapa{border-radius:32px;overflow:hidden;min-height:420px;background:#e9e2da;box-shadow:0 2px 0 rgba(76,17,17,.08),0 18px 40px rgba(76,17,17,.08)}
+.mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+/* rodapé */
+.rodape{background:var(--vinho-esc);color:#D9BDB6;padding:56px 0 28px;font-size:15px}
+.rodape .wrap{display:grid;gap:28px}
+.rodape-top{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:flex-start}
+.rodape-top img{height:42px;width:auto}
+.rodape-top p{margin:12px 0 0;max-width:340px}
+.rodape nav{display:flex;gap:22px;flex-wrap:wrap}
+.rodape nav a{text-decoration:none;font-weight:700}
+.rodape nav a:hover{color:#fff}
+.rodape-fim{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px}
+.rodape-fim a{color:var(--lar);font-weight:700;text-decoration:none}
+
+/* flutuantes */
+.zap-flut{position:fixed;right:20px;bottom:20px;z-index:60;width:64px;height:64px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 6px 0 #138A42,0 14px 30px rgba(0,0,0,.25);transition:transform .2s}
+.zap-flut:hover{transform:scale(1.08)}
+.zap-flut svg{width:34px;height:34px;color:#fff}
+.zap-flut .dica{position:absolute;right:76px;top:50%;transform:translateY(-50%);background:#fff;color:var(--tinta);padding:10px 14px;border-radius:14px;font-weight:700;font-size:14px;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.18);opacity:0;pointer-events:none;transition:opacity .3s}
+.zap-flut.dica-on .dica{opacity:1}
+.toast{opacity:0;visibility:hidden;position:fixed;left:50%;bottom:28px;transform:translate(-50%,140%);z-index:70;background:var(--tinta);color:#fff;padding:14px 18px;border-radius:16px;font-weight:700;display:flex;gap:14px;align-items:center;box-shadow:0 14px 40px rgba(0,0,0,.3);transition:transform .35s cubic-bezier(.3,1.4,.5,1);max-width:calc(100vw - 32px)}
+.toast.on{transform:translate(-50%,0);opacity:1;visibility:visible}
+.toast a{color:var(--lar);white-space:nowrap}
+.lightbox{position:fixed;inset:0;z-index:80;background:rgba(20,4,4,.92);display:none;align-items:center;justify-content:center;padding:24px}
+.lightbox.on{display:flex;animation:fade .25s}
+@keyframes fade{from{opacity:0}}
+.lightbox figure{margin:0;max-width:min(860px,100%);text-align:center}
+.lightbox img{max-height:78vh;border-radius:22px;margin:0 auto;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox figcaption{color:#fff;font-weight:900;font-size:20px;margin-top:16px}
+.lb-btn{position:absolute;background:rgba(255,255,255,.1);border:0;color:#fff;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;transition:background .2s}
+.lb-btn:hover{background:var(--lar)}
+.lb-btn svg{width:26px;height:26px}
+.lb-x{top:20px;right:20px}.lb-ant{left:20px;top:50%;transform:translateY(-50%)}.lb-prox{right:20px;top:50%;transform:translateY(-50%)}
+
+/* animação de entrada */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+
+/* responsivo */
+@media (max-width:1020px){
+  .nav{display:none}
+  .menu-btn{display:block}
+  .nav.aberta{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;background:var(--vinho-esc);padding:20px;gap:18px;box-shadow:0 20px 40px rgba(0,0,0,.3)}
+  .hero .wrap,.sobre .wrap,.calc,.pedido,.faq,.contato .wrap,.painel{grid-template-columns:1fr}
+  .hero-art{justify-self:center;max-width:400px;margin-top:20px}
+  .resumo{position:static}
+  .passos{grid-template-columns:1fr 1fr;row-gap:40px}
+  .passos::before{display:none}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .carrinho .txt{display:none}
+  .topo-cta .btn{display:none}
+  .hero{padding-top:28px}
+  .hero-tag{left:-8px;min-width:0;font-size:16px}
+  .selo-gira{width:110px;height:110px;right:-10px;top:-24px}
+  .pilares{grid-template-columns:1fr}
+  .opcoes{grid-template-columns:1fr}
+  .mix-l{grid-template-columns:110px 1fr 44px;font-size:14px}
+  .calc-in,.calc-out,.resumo,.contato-card{padding:22px}
+  .painel{padding:16px}
+  .passos{grid-template-columns:1fr}
+  .form .dupla{grid-template-columns:1fr}
+  .seg.tres{grid-template-columns:1fr}
+  .btn{padding:15px 22px;font-size:16px}
+  .hero-ctas .btn{width:100%}
+  .faixa-in{font-size:18px}
+  .lb-ant,.lb-prox{top:auto;bottom:20px;transform:none}
+  .rot{display:block;width:auto!important}
+  .galeria{columns:2;column-gap:10px}
+  .galeria button{margin-bottom:10px;border-radius:14px}
+  .item{grid-template-columns:52px 1fr auto;gap:10px}
+  .item img{width:52px;height:52px}
+  .item b{font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="preview-bar" id="previewBar">Prévia de site criada pela <b>Argus AI</b> para a Fornanzza<button aria-label="Fechar aviso" onclick="this.parentNode.remove()">×</button></div>
+
+<header class="topo" id="topo">
+  <div class="wrap">
+    <a href="#inicio" class="logo" aria-label="Fornanzza, início"><img src="img/logo.webp" alt="Fornanzza Indústria de Salgados" width="900" height="228"></a>
+    <nav class="nav" id="nav">
+      <a href="#produtos">Produtos</a>
+      <a href="#para-quem">Para quem</a>
+      <a href="#calculadora">Calculadora</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="topo-cta">
+      <a href="#pedido" class="carrinho" id="carrinho" aria-label="Ver meu pedido">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16l-1.5 11a2 2 0 0 1-2 1.7h-9a2 2 0 0 1-2-1.7Z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+        <span class="txt">Meu pedido</span><span class="qtd" id="qtdTopo">0</span>
+      </a>
+      <a class="btn btn-lar" href="#pedido" style="padding:12px 20px;font-size:15px">Pedir orçamento</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow rv">Indústria de salgados · Goiânia</span>
+      <h1 class="rv d1">O salgado que faz o seu <span class="rot" id="rot"><span class="rot-in" id="rotIn"><b>evento</b><b>negócio</b><b>aniversário</b><b>cardápio</b><b>evento</b></span></span> ser lembrado.</h1>
+      <p class="lead rv d2">Salgados frescos e ultracongelados, no cento ou no quilo. Qualidade e padronização pra sua casa, seu evento ou seu negócio.</p>
+      <div class="hero-ctas rv d3">
+        <a class="btn btn-lar" href="#pedido">Montar meu pedido
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="https://wa.me/5562981206860?text=Ol%C3%A1%2C%20Fornanzza!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" data-zap>Chamar no WhatsApp</a>
+      </div>
+      <div class="selos rv d3">
+        <span class="selo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg>Frescos e ultracongelados</span>
+        <span class="selo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v13H4zM4 7l2-4h12l2 4M9 11h6"/></svg>No cento ou no quilo</span>
+        <span class="selo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Entrega programada</span>
+      </div>
+    </div>
+    <div class="hero-art rv d2">
+      <div class="hero-foto" id="heroFoto"></div>
+      <div class="hero-tag flutua"><small>Saindo agora</small><span id="heroNome">Enroladinho de salsicha</span></div>
+      <svg class="selo-gira" viewBox="0 0 150 150" aria-hidden="true">
+        <defs><path id="circ" d="M75 75 m-56 0 a56 56 0 1 1 112 0 a56 56 0 1 1 -112 0"/></defs>
+        <circle cx="75" cy="75" r="74" fill="#FF8200"/>
+        <text font-family="Red Hat Display" font-weight="900" font-size="13.5" letter-spacing="2.6" fill="#fff"><textPath href="#circ" textLength="348" lengthAdjust="spacing">FRESCOS • ULTRACONGELADOS • </textPath></text>
+        <g class="miolo"><circle cx="75" cy="75" r="30" fill="#4C1111"/><path d="M75 55c4 8 16 18 15 28-.5 8-7 11-15 11s-14.5-3-15-11c-1-10 11-20 15-28z" fill="#E0A04A"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="faixa" aria-hidden="true"><div class="faixa-in" id="faixa"></div></div>
+
+<!-- SOBRE -->
+<section class="sec sobre" id="sobre">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow rv">Quem somos</span>
+      <h2 class="rv d1" style="margin-top:14px">Referência na fabricação de salgados.</h2>
+      <p class="rv d2">A Fornanzza une qualidade, padronização e excelência. Atuamos no atacado e no varejo, com grande variedade de produtos para lanchonetes, empresas, hotéis e pontos de alto fluxo.</p>
+      <p class="rv d2">Nosso compromisso é ser um parceiro confiável pra quem busca produto de excelência, entrega eficiente e estoque robusto.</p>
+      <div class="pilares">
+        <div class="pilar rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h4v4H4zM10 6h4v4h-4zM16 6h4v4h-4zM4 14h4v4H4zM10 14h4v4h-4zM16 14h4v4h-4z"/></svg></div><h3>Padronização</h3><p>O mesmo padrão do primeiro ao último cento.</p></div>
+        <div class="pilar rv d1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10h14v11M5 10l7-6 7 6M9 21v-6h6v6"/></svg></div><h3>Estoque robusto</h3><p>Tem quando o seu negócio precisa.</p></div>
+        <div class="pilar rv d2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4"/></svg></div><h3>Entrega programada</h3><p>Pra sua operação nunca parar.</p></div>
+      </div>
+      <div class="frase rv">Não trabalhamos com <s>preço baixo</s>.<br>Trabalhamos com <em>valor real.</em></div>
+    </div>
+    <div class="reel-box rv d2">
+      <div class="celular">
+        <video id="reel" src="img/reel.mp4" poster="img/reel-capa.webp" playsinline preload="none" controls></video>
+        <button class="play" id="playReel" aria-label="Assistir ao vídeo da Fornanzza"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg></span></button>
+      </div>
+      <p>A Fornanzza em 1 minuto ▸ aperte o play</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section class="sec" id="produtos" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow rv">Nosso cardápio</span>
+      <h2 class="rv d1">Dourados, recheados<br>e saindo do forno.</h2>
+      <p class="lead rv d2">Toque na foto pra ver de perto ou adicione direto ao seu pedido. Você monta tudo aqui e envia pelo WhatsApp.</p>
+    </div>
+    <div class="filtros rv" id="filtros" role="tablist" aria-label="Filtrar produtos"></div>
+    <div class="grade" id="grade"></div>
+  </div>
+</section>
+
+<!-- PARA QUEM -->
+<section class="sec dark" id="para-quem">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow rv">Para quem</span>
+      <h2 class="rv d1">Uma linha pra cada ocasião.</h2>
+      <p class="lead rv d2">Do pedido da sua casa ao abastecimento de lanchonetes, empresas e hotéis.</p>
+    </div>
+    <div class="abas rv" id="abas" role="tablist"></div>
+    <div id="paineis"></div>
+  </div>
+</section>
+
+<!-- CALCULADORA -->
+<section class="sec" id="calculadora">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow both rv">Calculadora de festa</span>
+      <h2 class="rv d1">Quantos salgados eu peço?</h2>
+      <p class="lead rv d2">Mexa nos controles e veja na hora uma estimativa pro seu evento.</p>
+    </div>
+    <div class="calc">
+      <div class="calc-in rv">
+        <div class="campo"><label for="adultos">Adultos <output id="oAdultos">40</output></label><input type="range" id="adultos" min="0" max="300" step="5" value="40"></div>
+        <div class="campo"><label for="criancas">Crianças <output id="oCriancas">10</output></label><input type="range" id="criancas" min="0" max="150" step="5" value="10"></div>
+        <div class="campo"><div class="rot-campo">Tipo de evento</div>
+          <div class="opcoes">
+            <label><input type="radio" name="tipo" value="8" checked><span>Festa<small>com outros pratos</small></span></label>
+            <label><input type="radio" name="tipo" value="15"><span>Só salgados<small>salgado é a refeição</small></span></label>
+            <label><input type="radio" name="tipo" value="6"><span>Coffee break<small>reunião ou evento</small></span></label>
+          </div>
+        </div>
+        <div class="campo" style="margin-bottom:0"><div class="rot-campo">Duração</div>
+          <div class="opcoes">
+            <label><input type="radio" name="dur" value="0.8"><span>Até 2 horas</span></label>
+            <label><input type="radio" name="dur" value="1" checked><span>2 a 4 horas</span></label>
+            <label><input type="radio" name="dur" value="1.2"><span>Mais de 4 horas</span></label>
+          </div>
+        </div>
+      </div>
+      <div class="calc-out rv d1" aria-live="polite">
+        <span class="rot-campo">Sua festa pede cerca de</span>
+        <div class="total"><span id="cTotal">0</span> <small>salgados</small></div>
+        <div class="centos">≈ <b id="cCentos">0</b> <span id="cCentosTxt">centos</span></div>
+        <div class="mix" id="cMix"></div>
+        <p class="nota">Estimativa com base em médias usadas em festas. A Fornanzza confirma a quantidade ideal no orçamento.</p>
+        <div class="acoes">
+          <button class="btn btn-lar" id="cUsar">Levar pro meu pedido</button>
+          <a class="btn btn-ghost" id="cZap" target="_blank" rel="noopener">Orçar no WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PEDIDO -->
+<section class="sec" id="pedido" style="background:var(--creme)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow rv">Monte seu pedido</span>
+      <h2 class="rv d1">Escolha, ajuste e envie.</h2>
+      <p class="lead rv d2">Escolha os salgados e as quantidades. O pedido chega pronto no WhatsApp da Fornanzza e a equipe responde com o orçamento.</p>
+    </div>
+    <div class="pedido">
+      <div class="lista" id="lista"></div>
+      <aside class="resumo" id="resumo" aria-live="polite">
+        <h3>Seu pedido</h3>
+        <div id="resItens"></div>
+        <div class="mini">Vender por</div>
+        <div class="seg" id="segUn">
+          <label><input type="radio" name="un" value="cento" checked><span>Cento</span></label>
+          <label><input type="radio" name="un" value="kg"><span>Quilo</span></label>
+        </div>
+        <div class="mini">Formato</div>
+        <div class="seg tres" id="segFmt">
+          <label><input type="radio" name="fmt" value="Frescos" checked><span>Frescos</span></label>
+          <label><input type="radio" name="fmt" value="Ultracongelados (pré-fritos)"><span>Ultracongelados</span></label>
+          <label><input type="radio" name="fmt" value="Frescos e ultracongelados"><span>Os dois</span></label>
+        </div>
+        <div class="form">
+          <input id="fNome" placeholder="Seu nome" autocomplete="name">
+          <div class="dupla">
+            <input id="fData" type="text" placeholder="Para quando? (ex: 15/11)" inputmode="numeric">
+            <input id="fLocal" placeholder="Bairro / cidade">
+          </div>
+          <div class="seg" id="segTipo" style="margin:0">
+            <label><input type="radio" name="tipoCli" value="Pra mim / minha festa" checked><span>Pra mim</span></label>
+            <label><input type="radio" name="tipoCli" value="Pra minha empresa / revenda"><span>Pra empresa</span></label>
+          </div>
+          <textarea id="fObs" placeholder="Alguma observação? (opcional)"></textarea>
+        </div>
+        <a class="btn btn-zap" id="enviar" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+          Enviar pedido no WhatsApp</a>
+        <div class="sec-acoes"><button class="link" id="copiar">Copiar resumo</button><button class="link" id="limpar">Limpar pedido</button></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="sec dark" id="como-funciona">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow both rv">Como funciona</span>
+      <h2 class="rv d1">Do pedido à sua mesa.</h2>
+    </div>
+    <div class="passos">
+      <div class="p rv"><div class="bola"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16l-1.5 11a2 2 0 0 1-2 1.7h-9a2 2 0 0 1-2-1.7Z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg></div><h3>Monte o pedido</h3><p>Aqui no site ou direto pelo WhatsApp.</p></div>
+      <div class="p rv d1"><div class="bola"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 12h6M9 9h6"/></svg></div><h3>Receba o orçamento</h3><p>A equipe confirma valores, sabores e disponibilidade.</p></div>
+      <div class="p rv d2"><div class="bola"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4"/></svg></div><h3>Programe a entrega</h3><p>Entregas programadas pro seu negócio nunca parar.</p></div>
+      <div class="p rv d3"><div class="bola"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15h18M5 15a7 7 0 0 1 14 0M12 6V4M2 19h20"/></svg></div><h3>Sirva ou estoque</h3><p>Frescos pra servir, ultracongelados pra ter sempre à mão.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section class="sec" id="galeria">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow rv">Galeria</span>
+      <h2 class="rv d1">Direto da nossa produção.</h2>
+    </div>
+    <div class="galeria rv" id="galeriaGrid"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq" style="background:var(--creme);padding-top:clamp(72px,10vw,120px)">
+  <div class="wrap faq">
+    <div class="sec-head" style="margin:0">
+      <span class="eyebrow rv">Dúvidas</span>
+      <h2 class="rv d1">Perguntas frequentes.</h2>
+      <p class="lead rv d2">Não achou o que procurava? A gente responde no WhatsApp.</p>
+      <div class="rv d3"><a class="btn btn-zap" href="https://wa.me/5562981206860?text=Ol%C3%A1%2C%20Fornanzza!%20Tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener" data-zap>Tirar dúvida no WhatsApp</a></div>
+    </div>
+    <div class="rv d1">
+      <details open><summary>Vocês vendem no atacado e no varejo?<i></i></summary><p>Sim. Atendemos do pedido da sua casa ao abastecimento de lanchonetes, empresas, hotéis e pontos de alto fluxo.</p></details>
+      <details><summary>Vende por cento ou por quilo?<i></i></summary><p>Os dois. Escolha a forma que fica melhor pra você na hora de montar o pedido.</p></details>
+      <details><summary>Vocês têm salgado congelado?<i></i></summary><p>Temos. Além dos frescos, temos a linha ultracongelada, pré-frita, pra você ter salgado bom sempre à mão.</p></details>
+      <details><summary>Fazem entrega?<i></i></summary><p>Trabalhamos com entregas programadas, pra que o seu negócio nunca pare. Combine o dia pelo WhatsApp.</p></details>
+      <details><summary>Posso revender os salgados Fornanzza?<i></i></summary><p>Pode. A linha para lanchonetes foi pensada pra revenda, com padrão constante. Fale com a gente pra conhecer as condições.</p></details>
+      <details><summary>Atendem eventos de empresas e hotéis?<i></i></summary><p>Sim. Temos uma linha de produtos pensada pra eventos corporativos, empresas e hotéis.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="sec contato" id="contato">
+  <div class="wrap">
+    <div class="contato-card rv">
+      <span class="eyebrow">Fale com a gente</span>
+      <h2>Bora fechar o seu pedido?</h2>
+      <a class="canal" href="https://wa.me/5562981206860?text=Ol%C3%A1%2C%20Fornanzza!%20Vim%20pelo%20site." target="_blank" rel="noopener" data-zap>
+        <span class="ic" style="background:#25D366"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg></span>
+        <span><b>(62) 98120-6860</b><small>WhatsApp · pedidos e orçamentos</small></span></a>
+      <a class="canal" href="https://www.instagram.com/fornanzza/" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></span>
+        <span><b>@fornanzza</b><small>Acompanhe a produção</small></span></a>
+      <a class="canal" href="https://maps.app.goo.gl/FMzFpFUzauQ8S9zD6" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+        <span><b>Como chegar</b><small>Abrir no Google Maps · Goiânia, GO</small></span></a>
+      <a class="canal" href="https://www.ifood.com.br/delivery/goiania-go/simplesinho-burger---hamburgueria-jardim-goias/2649d5c1-14c2-475d-92a4-40a09307e0b2?utm_medium=share" target="_blank" rel="noopener">
+        <span class="ic" style="background:#EA1D2C"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16M5 11a7 7 0 0 1 14 0M4 15h16l-1 4H5z"/></svg></span>
+        <span><b>Também no iFood</b><small>Peça pelo app</small></span></a>
+    </div>
+    <div class="mapa rv d1"><iframe title="Mapa da Fornanzza" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=-16.7320169,-49.2485238&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rodape-top">
+      <div><img src="img/logo.webp" alt="Fornanzza" width="900" height="228"><p>Praticidade e qualidade para sua casa, evento ou negócio.</p></div>
+      <nav aria-label="Rodapé"><a href="#produtos">Produtos</a><a href="#para-quem">Para quem</a><a href="#calculadora">Calculadora</a><a href="#pedido">Pedido</a><a href="#contato">Contato</a></nav>
+    </div>
+    <div class="rodape-fim"><span>© 2026 Fornanzza · Indústria de Salgados</span><span>Site desenvolvido por <a href="https://www.instagram.com/_argus_ai/" target="_blank" rel="noopener">Argus AI</a></span></div>
+  </div>
+</footer>
+
+<a class="zap-flut" id="zapFlut" href="https://wa.me/5562981206860?text=Ol%C3%A1%2C%20Fornanzza!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" data-zap>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+  <span class="dica">Peça seu orçamento 👋</span>
+</a>
+<div class="toast" id="toast" role="status"><span id="toastTxt"></span><a href="#pedido">Ver pedido</a></div>
+<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button class="lb-btn lb-x" id="lbX" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <button class="lb-btn lb-ant" id="lbAnt" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="lb-btn lb-prox" id="lbProx" aria-label="Próxima"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+
+<script>
+const ZAP='5562981206860';
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const zapLink=txt=>`https://wa.me/${ZAP}?text=${encodeURIComponent(txt)}`;
+const ICON_PLUS='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>';
+
+// ------------------------------------------------ dados
+const CATS={todos:'Todos',enroladinhos:'Enroladinhos',empadas:'Empadas',esfihas:'Esfihas e trouxinhas',assados:'Assados'};
+const PRODUTOS=[
+ {id:'salsicha',nome:'Enroladinho de salsicha',cat:'enroladinhos',img:'p2',desc:'Massa macia e dourada envolvendo a salsicha inteira.'},
+ {id:'salsicha-bacon',nome:'Enroladinho de salsicha, queijo e bacon',cat:'enroladinhos',img:'p6',desc:'Salsicha, queijo derretido e bacon numa massa assada.'},
+ {id:'presunto-queijo',nome:'Enroladinho de presunto e queijo',cat:'enroladinhos',img:'p14',desc:'O clássico presunto e queijo, enrolado e assado no ponto.'},
+ {id:'carne-ervas',nome:'Enrolado de carne com ervas',cat:'enroladinhos',img:'p20',desc:'Recheio de carne moída e cobertura de ervas.'},
+ {id:'doce-coco',nome:'Enroladinho doce com coco',cat:'enroladinhos',img:'p12',desc:'Recheio cremoso e cobertura de coco ralado.'},
+ {id:'empada-frango',nome:'Empada de frango',cat:'empadas',img:'p16',desc:'Massa que desmancha com recheio de frango.'},
+ {id:'empadinha',nome:'Empadinha',cat:'empadas',img:'p18',desc:'Tampa dourada e borda trabalhada, perfeita pra festa.'},
+ {id:'esfiha-frango',nome:'Esfiha de frango',cat:'esfihas',img:'p24',desc:'Fechadinha em triângulo, com recheio de frango.'},
+ {id:'trouxinha',nome:'Trouxinha assada',cat:'esfihas',img:'p26',desc:'Massa dobrada em trouxinha e assada até dourar.'},
+ {id:'meia-lua',nome:'Meia-lua assada',cat:'assados',img:'p4',desc:'Pastel de forno em meia-lua, bem recheado.'},
+ {id:'pastel-assado',nome:'Pastel assado',cat:'assados',img:'p15',desc:'Retangular, massa leve e borda selada no garfo.'},
+ {id:'assado-carne',nome:'Assado de carne',cat:'assados',img:'p25',desc:'Recheio de carne moída numa massa macia.'}
+];
+const HERO=[['p1','Enroladinho de salsicha'],['p22','Esfiha de frango'],['p6','Salsicha, queijo e bacon'],['p11','Empadas'],['p25','Assado de carne'],['p3','Meia-lua assada'],['p14','Presunto e queijo']];
+const GALERIA=[['p7','Estufa cheia'],['p1','Enroladinho de salsicha'],['p17','Empada de frango'],['p8','Linha para lanchonetes'],['p22','Esfiha de frango'],['p19','Enrolado de carne com ervas'],['p3','Meia-lua assada'],['p9','Pronto pra estufa'],['p11','Empadas'],['p5','Enroladinho especial'],['p23','Esfiha de frango'],['p13','Enroladinho doce com coco'],['p21','Enrolado de carne com ervas']];
+const ABAS=[
+ {id:'festas',rot:'Festas e eventos',linha:'Salgados tradicionais',img:'p10',tit:'A estrela da mesa da festa.',txt:'Salgados para festas e eventos, no cento. Frescos pra servir no dia ou ultracongelados pra organizar com antecedência.',it:['Escolha os sabores e a quantidade aqui no site','Frescos ou ultracongelados pré-fritos','Não sabe quanto pedir? Use a calculadora'],cta:'Calcular minha festa',href:'#calculadora',ic:'<path d="M4 20h16M6 20v-7h12v7M9 13V9h6v4M12 9V6"/><path d="M12 3.5c.8.8.8 1.7 0 2.5"/>'},
+ {id:'lanchonetes',rot:'Lanchonetes e revenda',linha:'Linha para lanchonetes',img:'p8',tit:'O mesmo salgado, toda vez.',txt:'Produtos com padrão constante para revenda. Seu cliente volta porque sabe o que vai encontrar.',it:['Padrão constante de tamanho e sabor','Estoque robusto pra você não ficar sem','Entregas programadas'],cta:'Quero revender',zap:'Olá, Fornanzza! Tenho uma lanchonete/ponto de venda e quero conhecer a linha para revenda.',ic:'<path d="M3 20h18M5 20v-8h14v8M4 12l2-7h12l2 7"/><path d="M9 16h6"/>'},
+ {id:'empresas',rot:'Empresas e hotéis',linha:'Eventos corporativos',img:'p11',tit:'Pro coffee break e pro evento da empresa.',txt:'Soluções para empresas e hotéis, com a regularidade que a sua operação precisa.',it:['Linha pensada pra eventos corporativos','Pedidos recorrentes com entrega programada','Atendimento direto pelo WhatsApp'],cta:'Pedir proposta pra empresa',zap:'Olá, Fornanzza! Quero uma proposta de salgados para minha empresa/hotel.',ic:'<path d="M4 21V5h10v16M14 9h6v12M7 9h2M7 13h2M7 17h2M17 13h1M17 17h1M2 21h20"/>'},
+ {id:'especiais',rot:'Públicos exigentes',linha:'Salgados especiais',img:'p6',tit:'Opções refinadas pra quem exige mais.',txt:'Uma linha especial pra quem quer surpreender os convidados ou o cliente mais exigente.',it:['Sabores e recheios especiais','Mesmo padrão de qualidade Fornanzza','Monte o mix no seu pedido'],cta:'Ver o cardápio',href:'#produtos',ic:'<path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/>'},
+ {id:'casa',rot:'Sua casa',linha:'Ultracongelados',img:'p17',tit:'Salgado bom sempre à mão.',txt:'Com a linha ultracongelada, pré-frita, você tem salgado de qualidade guardado pra quando bater a vontade ou chegar visita.',it:['Ultracongelados pré-fritos','No cento ou no quilo','Peça pelo WhatsApp'],cta:'Pedir pra minha casa',zap:'Olá, Fornanzza! Quero pedir salgados ultracongelados pra minha casa.',ic:'<path d="M3 11l9-7 9 7M5 9.5V20h14V9.5M10 20v-6h4v6"/>'}
+];
+const CK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M8 12.5l2.7 2.7L16 9.8"/></svg>';
+
+// ------------------------------------------------ estado do pedido
+let pedido={};
+try{pedido=JSON.parse(localStorage.getItem('fornanzza-pedido')||'{}')||{}}catch(e){pedido={}}
+const salvar=()=>{try{localStorage.setItem('fornanzza-pedido',JSON.stringify(pedido))}catch(e){}};
+const unidade=()=>($('input[name=un]:checked')||{}).value||'cento';
+const unTxt=(n,u=unidade())=>u==='kg'?`${n} kg`:`${n} ${n===1?'cento':'centos'}`;
+
+// ------------------------------------------------ topo, menu, faixa
+const topo=$('#topo');
+addEventListener('scroll',()=>topo.classList.toggle('solid',scrollY>40),{passive:true});
+$('#menuBtn').onclick=e=>{const n=$('#nav');const a=n.classList.toggle('aberta');e.currentTarget.setAttribute('aria-expanded',a)};
+$$('#nav a').forEach(a=>a.onclick=()=>$('#nav').classList.remove('aberta'));
+{const w=['Enroladinhos','Empadas','Esfihas','Trouxinhas','Assados de forno','Linha para lanchonetes','Eventos corporativos','Festas e eventos','Atacado e varejo'];
+ const s=w.map(x=>`<span>${x}</span>`).join('');$('#faixa').innerHTML=s+s;}
+
+// ------------------------------------------------ hero: palavra que gira + fotos
+{const rot=$('#rot'),inn=$('#rotIn'),bs=[...inn.children];let i=0;
+ const med=()=>bs.map(b=>{const r=document.createRange();r.selectNodeContents(b);return r.getBoundingClientRect().width});
+ let ws=med();rot.style.width=ws[0]+'px';
+ document.fonts&&document.fonts.ready.then(()=>{ws=med();rot.style.width=ws[i]+'px'});
+ addEventListener('resize',()=>{ws=med();rot.style.width=ws[i]+'px'});
+ setInterval(()=>{i++;inn.style.transition='';inn.style.transform=`translateY(${-i*1.08}em)`;rot.style.width=ws[i]+'px';
+  if(i===bs.length-1)setTimeout(()=>{inn.style.transition='none';i=0;inn.style.transform='translateY(0)';rot.style.width=ws[0]+'px'},650)},2600);}
+{const box=$('#heroFoto');HERO.forEach(([f,n],k)=>{const im=new Image();im.src=`img/${f}.webp`;im.alt=n;im.loading=k?'lazy':'eager';if(!k)im.className='on';box.appendChild(im)});
+ const ims=[...box.children],nome=$('#heroNome');let k=0;
+ setInterval(()=>{ims[k].classList.remove('on');k=(k+1)%ims.length;ims[k].classList.add('on');nome.style.opacity=0;setTimeout(()=>{nome.textContent=HERO[k][1];nome.style.opacity=1},300)},3400);}
+
+// ------------------------------------------------ vídeo
+$('#playReel').onclick=e=>{const v=$('#reel');v.preload='auto';v.play();e.currentTarget.remove()};
+
+// ------------------------------------------------ produtos
+let filtro='todos';
+$('#filtros').innerHTML=Object.entries(CATS).map(([k,v])=>`<button class="chip${k==='todos'?' on':''}" data-f="${k}" role="tab">${v}</button>`).join('');
+function cardHTML(p){const n=pedido[p.id]||0;return `<article class="card" data-cat="${p.cat}">
+ <button class="foto" data-lb="${p.id}" aria-label="Ampliar foto: ${p.nome}"><img src="img/${p.img}.webp" alt="${p.nome}" loading="lazy" width="900" height="900"><span class="lupa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4M11 8v6M8 11h6"/></svg></span></button>
+ <div class="info"><span class="cat">${CATS[p.cat]}</span><h3>${p.nome}</h3><p>${p.desc}</p>
+ <button class="add${n?' tem':''}" data-add="${p.id}"><span>${n?'No pedido':'Adicionar ao pedido'}</span>${n?`<span class="n">${unTxt(n)}</span>`:ICON_PLUS}</button></div></article>`}
+function renderGrade(){$('#grade').innerHTML=PRODUTOS.filter(p=>filtro==='todos'||p.cat===filtro).map(cardHTML).join('')}
+renderGrade();
+$('#filtros').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;filtro=b.dataset.f;$$('.chip').forEach(c=>c.classList.toggle('on',c===b));
+ $$('#grade .card').forEach(c=>c.classList.add('sai'));setTimeout(()=>{renderGrade();requestAnimationFrame(()=>$$('#grade .card').forEach((c,i)=>{c.classList.add('sai');setTimeout(()=>c.classList.remove('sai'),30+i*40)}))},220)};
+$('#grade').onclick=e=>{const a=e.target.closest('[data-add]');if(a){mudar(a.dataset.add,1);toast(`${PRODUTOS.find(p=>p.id===a.dataset.add).nome}: +${unTxt(1)}`);return}
+ const f=e.target.closest('[data-lb]');if(f){const lista=PRODUTOS.filter(p=>filtro==='todos'||p.cat===filtro);abrirLB(lista.map(p=>[p.img,p.nome]),lista.findIndex(p=>p.id===f.dataset.lb))}};
+
+// ------------------------------------------------ para quem
+$('#abas').innerHTML=ABAS.map((a,i)=>`<button class="aba${i?'':' on'}" data-aba="${a.id}" role="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">${a.ic}</svg>${a.rot}</button>`).join('');
+$('#paineis').innerHTML=ABAS.map((a,i)=>`<div class="painel${i?'':' on'}" id="pn-${a.id}" role="tabpanel"><img src="img/${a.img}.webp" alt="${a.linha}" loading="lazy"><div><span class="linha">${a.linha}</span><h3>${a.tit}</h3><p>${a.txt}</p><ul>${a.it.map(x=>`<li>${CK}${x}</li>`).join('')}</ul>${a.zap?`<a class="btn btn-lar" href="${zapLink(a.zap)}" target="_blank" rel="noopener">${a.cta}</a>`:`<a class="btn btn-lar" href="${a.href}">${a.cta}</a>`}</div></div>`).join('');
+$('#abas').onclick=e=>{const b=e.target.closest('.aba');if(!b)return;$$('.aba').forEach(x=>x.classList.toggle('on',x===b));$$('.painel').forEach(p=>p.classList.toggle('on',p.id==='pn-'+b.dataset.aba))};
+
+// ------------------------------------------------ calculadora
+const MIX=[['Enroladinhos',.35,['salsicha','presunto-queijo']],['Esfihas e trouxinhas',.25,['esfiha-frango']],['Empadas',.2,['empada-frango']],['Assados',.2,['meia-lua']]];
+let calcRes={total:0,centos:0};
+function calc(){
+ const ad=+$('#adultos').value,cr=+$('#criancas').value,tp=+$('input[name=tipo]:checked').value,du=+$('input[name=dur]:checked').value;
+ $('#oAdultos').textContent=ad;$('#oCriancas').textContent=cr;
+ ['#adultos','#criancas'].forEach(s=>{const r=$(s);r.style.setProperty('--p',(r.value-r.min)/(r.max-r.min)*100+'%')});
+ const bruto=(ad+cr*.6)*tp*du;const total=bruto>0?Math.ceil(bruto/25)*25:0;const centos=Math.ceil(total/100);
+ calcRes={total,centos,ad,cr,tp,du};
+ animarNum($('#cTotal'),total);$('#cCentos').textContent=centos;$('#cCentosTxt').textContent=centos===1?'cento':'centos';
+ $('#cMix').innerHTML=MIX.map(([n,p])=>`<div class="mix-l"><span>${n}</span><span class="mix-b"><i style="width:${p*100}%"></i></span><em>${Math.round(total*p)}</em></div>`).join('');
+ const tipoTxt=$('input[name=tipo]:checked').parentNode.querySelector('span').firstChild.textContent;
+ const durTxt=$('input[name=dur]:checked').parentNode.innerText.trim().toLowerCase();
+ $('#cZap').href=zapLink(`Olá, Fornanzza! Usei a calculadora do site:\n• ${ad} adultos e ${cr} crianças\n• ${tipoTxt}, ${durTxt}\n• Estimativa: ~${total} salgados (${centos} ${centos===1?'cento':'centos'})\nPode me ajudar com o orçamento?`);
+}
+function animarNum(el,alvo){const de=+el.dataset.v||0;el.dataset.v=alvo;const t0=performance.now();const f=t=>{const p=Math.min(1,(t-t0)/500);el.textContent=Math.round(de+(alvo-de)*(1-(1-p)**3));if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)}
+$$('#calculadora input').forEach(i=>i.addEventListener('input',calc));calc();
+$('#cUsar').onclick=()=>{
+ const c=calcRes.centos;if(!c)return;
+ if(unidade()!=='cento'){$('input[name=un][value=cento]').checked=true}
+ let resto=c;const alvo=[];MIX.forEach(([,p,ids],k)=>{let n=k===MIX.length-1?resto:Math.max(0,Math.round(c*p));n=Math.min(n,resto);resto-=n;if(n>0){const per=Math.floor(n/ids.length);ids.forEach((id,j)=>alvo.push([id,per+(j<n%ids.length?1:0)]))}});
+ pedido={};alvo.forEach(([id,n])=>{if(n>0)pedido[id]=n});salvar();atualizarTudo();
+ toast(`${c} ${c===1?'cento':'centos'} no seu pedido`);setTimeout(()=>$('#pedido').scrollIntoView({behavior:'smooth'}),350);
+};
+
+// ------------------------------------------------ pedido
+function renderLista(){
+ $('#lista').innerHTML=Object.entries(CATS).filter(([k])=>k!=='todos').map(([k,v])=>`<div class="grupo"><h3>${v}</h3>${PRODUTOS.filter(p=>p.cat===k).map(p=>{const n=pedido[p.id]||0;return `<div class="item${n?' tem':''}" data-id="${p.id}"><img src="img/${p.img}.webp" alt="" loading="lazy"><div><b>${p.nome}</b><small>${n?unTxt(n):'Toque no +'}</small></div><div class="passo"><button data-m="-1" aria-label="Diminuir ${p.nome}">−</button><span>${n}</span><button data-m="1" aria-label="Aumentar ${p.nome}">+</button></div></div>`}).join('')}</div>`).join('');
+}
+$('#lista').onclick=e=>{const b=e.target.closest('[data-m]');if(!b)return;mudar(b.closest('.item').dataset.id,+b.dataset.m)};
+function mudar(id,d){pedido[id]=Math.max(0,(pedido[id]||0)+d);if(!pedido[id])delete pedido[id];salvar();atualizarTudo();if(d>0){const c=$('#carrinho');c.classList.remove('bump');void c.offsetWidth;c.classList.add('bump')}}
+function totalItens(){return Object.values(pedido).reduce((a,b)=>a+b,0)}
+function mensagem(){
+ const its=PRODUTOS.filter(p=>pedido[p.id]).map(p=>`• ${unTxt(pedido[p.id])} de ${p.nome}`);
+ const v=s=>$(s).value.trim();
+ const extra=[['Para quando',v('#fData')],['Bairro/cidade',v('#fLocal')],['Nome',v('#fNome')],['Obs',v('#fObs')]].filter(([,x])=>x).map(([k,x])=>`${k}: ${x}`);
+ return ['Olá, Fornanzza! Montei um pedido pelo site:','',...its,'',
+  `Total: ${unTxt(totalItens())}`,`Formato: ${$('input[name=fmt]:checked').value}`,`Pedido: ${$('input[name=tipoCli]:checked').value}`,...extra,'','Pode me passar o orçamento?'].join('\n');
+}
+function renderResumo(){
+ const its=PRODUTOS.filter(p=>pedido[p.id]);const tot=totalItens();
+ $('#resItens').innerHTML=its.length?`<ul class="itens">${its.map(p=>`<li><span>${p.nome}</span><b>${unTxt(pedido[p.id])}</b></li>`).join('')}</ul><div class="tot"><span>Total</span><span>${unTxt(tot)}</span></div>`:`<div class="vazio">Seu pedido está vazio. Adicione salgados ao lado ou use a calculadora de festa.</div>`;
+ const env=$('#enviar');env.href=its.length?zapLink(mensagem()):zapLink('Olá, Fornanzza! Vim pelo site e quero um orçamento.');
+ $('#qtdTopo').textContent=tot;
+}
+function atualizarTudo(){renderLista();renderResumo();renderGrade()}
+['#fNome','#fData','#fLocal','#fObs'].forEach(s=>$(s).addEventListener('input',renderResumo));
+$$('#resumo input[type=radio]').forEach(r=>r.addEventListener('change',atualizarTudo));
+$('#limpar').onclick=()=>{pedido={};salvar();atualizarTudo();toast('Pedido limpo')};
+$('#copiar').onclick=async()=>{try{await navigator.clipboard.writeText(mensagem());toast('Resumo copiado')}catch(e){toast('Não deu pra copiar neste navegador')}};
+atualizarTudo();
+
+// ------------------------------------------------ galeria + lightbox
+$('#galeriaGrid').innerHTML=GALERIA.map(([f,n],i)=>`<button data-g="${i}" aria-label="Ampliar: ${n}"><img src="img/${f}.webp" alt="${n}" loading="lazy" width="900" height="900"></button>`).join('');
+$('#galeriaGrid').onclick=e=>{const b=e.target.closest('[data-g]');if(b)abrirLB(GALERIA,+b.dataset.g)};
+let lbLista=[],lbI=0;
+function abrirLB(lista,i){lbLista=lista;lbI=i;mostrarLB();$('#lb').classList.add('on');document.body.style.overflow='hidden';$('#lbX').focus()}
+function mostrarLB(){const [f,n]=lbLista[lbI];$('#lbImg').src=`img/${f}.webp`;$('#lbImg').alt=n;$('#lbCap').textContent=n}
+function fecharLB(){$('#lb').classList.remove('on');document.body.style.overflow=''}
+$('#lbX').onclick=fecharLB;$('#lb').onclick=e=>{if(e.target.id==='lb')fecharLB()};
+$('#lbAnt').onclick=()=>{lbI=(lbI-1+lbLista.length)%lbLista.length;mostrarLB()};
+$('#lbProx').onclick=()=>{lbI=(lbI+1)%lbLista.length;mostrarLB()};
+addEventListener('keydown',e=>{if(!$('#lb').classList.contains('on'))return;if(e.key==='Escape')fecharLB();if(e.key==='ArrowLeft')$('#lbAnt').click();if(e.key==='ArrowRight')$('#lbProx').click()});
+
+// ------------------------------------------------ toast, dica do zap, entrada ao rolar
+let tT;function toast(m){$('#toastTxt').textContent=m;const t=$('#toast');t.classList.add('on');clearTimeout(tT);tT=setTimeout(()=>t.classList.remove('on'),2600)}
+setTimeout(()=>{$('#zapFlut').classList.add('dica-on');setTimeout(()=>$('#zapFlut').classList.remove('dica-on'),5000)},4000);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+$$('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
