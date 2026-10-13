@@ -816,7 +816,7 @@ addEventListener('keydown',e=>{if(!$('#lb').classList.contains('on'))return;if(e
 let tT;function toast(m){$('#toastTxt').textContent=m;const t=$('#toast');t.classList.add('on');clearTimeout(tT);tT=setTimeout(()=>t.classList.remove('on'),2600)}
 setTimeout(()=>{$('#zapFlut').classList.add('dica-on');setTimeout(()=>$('#zapFlut').classList.remove('dica-on'),5000)},4000);
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
-$('.rv').forEach(el=>io.observe(el));
+$$('.rv').forEach(el=>io.observe(el));
 {const vis=new Set();const io2=new IntersectionObserver(es=>{es.forEach(e=>e.isIntersecting?vis.add(e.target):vis.delete(e.target));$('#zapFlut').classList.toggle('some',vis.size>0)},{threshold:.15});['#resumo','#contato'].forEach(s=>io2.observe($(s)))}
 </script>
 </body>
